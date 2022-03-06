@@ -19,6 +19,7 @@ contract BasicLending {
     // @notice Constructor to set address of token contract
     constructor(address _address) {
         tokenContract = Token(_address);
+        lendingBalance = tokenContract.totalTokenSupply() * 50 / 100;
     }
 
 
